@@ -2,6 +2,9 @@
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
+    const d = new Date()
+    if(d.getDay() == 0 || d.getDay() == 6) document.querySelector("#weekend span").innerHTML = 'Yes'
+    else document.querySelector("#weekend span").innerHTML = 'No'
 
     window.addEventListener('load', ()=>{
 
