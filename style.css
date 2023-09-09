@@ -92,7 +92,12 @@ footer {
         line-height: 1.4em;
         font-weight: 500;
 
-        & span {
+        & a {
+            color: #1fe148;
+            text-decoration: underline;
+        }
+
+        & span:nth-child(1) {
             color: #1fe148;
         }
 
