@@ -291,6 +291,7 @@ nav {
 }
 
 .logo #og {
+    opacity: 0;
     display: block;
 }
 
@@ -303,7 +304,7 @@ nav {
 }
 
 #A-about-path-1, #A-about-path-2, #B-about-path, #O-about-path, #U-about-path, #T-about-path {
-    display: none;
+    display: block;
 }
 
 g path {

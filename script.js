@@ -1,3 +1,33 @@
+// import {DrawSVGPlugin} from 'DrawSVGPlugin'
+
+function drawSVGPathOG() {
+    $('#og').css('opacity', 1)
+    var $svg = $('#og').drawsvg({
+        duration: 600
+    });
+
+    $svg.drawsvg('animate');
+}
+
+function drawSVGPathAbout() {
+    $('#about').css('display', 'block')
+    $('#about').css('opacity', 1)
+    var $svg = $('#about').drawsvg({
+        duration: 600
+    });
+
+    $svg.drawsvg('animate');
+}
+
+function drawSVGPathOG2() {
+    $('#og').css('display', 'block')
+    $('#og').css('opacity', 1)
+    var $svg = $('#og').drawsvg({
+        duration: 600
+    });
+
+    $svg.drawsvg('animate');
+}
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -27,26 +57,42 @@ window.onbeforeunload = function () {
         .fromTo(".logo h1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"})
         .fromTo(".loading-section h1", {x:'-150%'}, {x:'0%', duration: 1, ease:"back.out(1.5)"}, "-=1")
         .fromTo(".loading-section h1 span", {opacity: 0, display: 'none'}, {opacity: 1, display: 'inline'}, "+=1")
-        .fromTo(".logo h3", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"}, "-=0.5")
-        .fromTo("#C-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"})
-        .fromTo("#O-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.5")
-        .fromTo("#M-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#M-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#U-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#N-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#I-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#T-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#Y-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#C-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#O-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.4")
-        .fromTo("#L-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#L-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#A-path-1", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#A-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#B-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo(".logo", {paddingTop: '30vh'}, {paddingTop: '5vh', duration: 1, ease:"back.out(1.5)"})
+        .fromTo(".logo h3", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"})
+        .call(drawSVGPathOG,null,"-=4")
+        // .fromTo("#C-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"})
+        // .call(drawSVGPath, ['O'])
+        // .fromTo("#O-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.5")
+        // .call(drawSVGPath, ['M'])
+        // .fromTo("#M-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['M'])
+        // .fromTo("#M-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['U'])
+        // .fromTo("#U-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['N'])
+        // .fromTo("#N-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['I'])
+        // .fromTo("#I-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['T'])
+        // .fromTo("#T-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['Y'])
+        // .fromTo("#Y-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['C'])
+        // .fromTo("#C-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['O'])
+        // .fromTo("#O-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.4")
+        // .call(drawSVGPath, ['L'])
+        // .fromTo("#L-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['L'])
+        // .fromTo("#L-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['A'])
+        // .fromTo("#A-path-1", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['A'])
+        // .fromTo("#A-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .call(drawSVGPath, ['B'])
+        // .fromTo("#B-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        .fromTo(".logo", {paddingTop: '30vh'}, {paddingTop: '5vh', duration: 1, ease:"back.out(1.5)"}, "+=3.5")
         .fromTo("footer", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "back.out(1.5)"})
-        .fromTo(".preloader-cover", {opacity: 1}, {opacity: 0, duration: 1, ease:"power4.out"})
+        .fromTo(".preloader-cover", {opacity: 1}, {opacity: 0, duration: 1, ease:"power4.out"}, "-=1.2")
         .fromTo(".background", {scale: 4}, {scale: 1.2, duration: 1, ease: "back.out(1.5)"}, "-=1.5")
 
         .fromTo(".list-1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"}, "-=1")
@@ -99,16 +145,17 @@ document.querySelector('nav').addEventListener('click', ()=>{
 
         about_animation
         .fromTo("#og", {display: 'block', opacity: 1}, {display: 'none', opacity: 0, duration: 0.5, ease:"power1.out"})
-        .fromTo("#about, #A-about-path-1, #A-about-path-2, #B-about-path, #O-about-path, #U-about-path, #T-about-path", {display:'none', opacity: 0}, {display: 'block', opacity: 1})
-        .fromTo("#A-about-path-2", {display: 'none', drawSVG: 0}, {display:'block', drawSVG: "100%", duration: 0.2, ease:"power1.out"})
-        .fromTo("#A-about-path-1", {display: 'none', drawSVG: 0}, {display:'block', drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#B-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#O-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#U-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#T-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        .call(drawSVGPathAbout)
+        // .fromTo("#about, #A-about-path-1, #A-about-path-2, #B-about-path, #O-about-path, #U-about-path, #T-about-path", {display:'none', opacity: 0}, {display: 'block', opacity: 1})
+        // .fromTo("#A-about-path-2", {display: 'none', drawSVG: 0}, {display:'block', drawSVG: "100%", duration: 0.2, ease:"power1.out"})
+        // .fromTo("#A-about-path-1", {display: 'none', drawSVG: 0}, {display:'block', drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#B-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#O-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#U-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#T-about-path", {display:'none', drawSVG: 0}, {display:'block',drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
 
-        .fromTo(".list-1", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1.8")
-            .fromTo(".list-2", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1.8")
+        .fromTo(".list-1", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1")
+            .fromTo(".list-2", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1")
 
             .fromTo(".list-data", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1.8")
             .fromTo(".list-data-2", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1.6")
@@ -143,32 +190,33 @@ document.querySelector('nav').addEventListener('click', ()=>{
         let about_animation = gsap.timeline({delay: .6})
 
         about_animation
-        .fromTo("#about, #A-about-path-1, #A-about-path-2, #B-about-path, #O-about-path, #U-about-path, #T-about-path", {display: 'block', opacity: 1}, {display: 'none', opacity: 0, duration: 0.5, ease:"power1.out"})
-        .set("#og", {display: 'block', opacity: 1})
-        .fromTo(".list-about-1", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"})
+        .fromTo("#about", {display: 'block', opacity: 1}, {display: 'none', opacity: 0, duration: 0.5, ease:"power1.out"})
+        // .set("#og", {display: 'block'})
+        .fromTo(".list-about-1", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=0.5")
         .fromTo(".list-about-data-1", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=1")
         .fromTo(".list-about-2", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=0.8")
         .fromTo(".list-about-data-2", {y: '0%'}, {y: '100%', duration: 1, ease:"back.out(1.5)"}, "-=0.8")
         .set(".list-about-1, .list-about-data-1, .list-about-2, .list-about-data-2", {display: 'none'})
         .set(".list-1, .list-2, .list-data, .list-data-2, .music-list, .button, .list-data-3", {display: 'flex'})
-        .fromTo("#C-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"})
-        .fromTo("#O-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.5")
-        .fromTo("#M-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#M-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#U-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#N-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#I-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#T-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#Y-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#C-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
-        .fromTo("#O-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.4")
-        .fromTo("#L-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#L-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
-        .fromTo("#A-path-1", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#A-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
-        .fromTo("#B-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        .call(drawSVGPathOG2,null,"-=1")
+        // .fromTo("#C-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"})
+        // .fromTo("#O-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.5")
+        // .fromTo("#M-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#M-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#U-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#N-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#I-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#T-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#Y-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#C-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#O-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.4")
+        // .fromTo("#L-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#L-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.3, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#A-path-1", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#A-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
+        // .fromTo("#B-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
 
-        .fromTo(".list-1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"}, "-=2")
+        .fromTo(".list-1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"}, "+=1")
         .fromTo(CSSRulePlugin.getRule(".list-1:before"), {cssRule: {width: '0%'}}, {cssRule: {width: '130%', duration: 1, ease:"back.out(1.5)"}})
         // .fromTo(".list-1", {opacity: '100%'}, {opacity: '90%', duration: 0.5, ease:"back.out(1.5)"}, "-=0.5")
         .fromTo(".list-2", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"})
