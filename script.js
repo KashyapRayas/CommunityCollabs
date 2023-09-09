@@ -7,7 +7,6 @@ window.onbeforeunload = function () {
     else document.querySelector("#weekend span").innerHTML = 'No'
 
     window.addEventListener('load', ()=>{
-
         let animation = gsap.timeline({delay: .6});
 
         document.querySelector('.logo').style.display = 'flex'
@@ -19,6 +18,10 @@ window.onbeforeunload = function () {
         window.setTimeout(()=>{
             b.reveal(1000)
         }, 6000)
+
+        window.setTimeout(()=>{
+            window.scrollTo(0, 0);
+        }, 2000)
 
         animation
         .fromTo(".logo h1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"})
@@ -42,8 +45,9 @@ window.onbeforeunload = function () {
         .fromTo("#A-path-2", {drawSVG: 0}, {drawSVG: "100%", duration: 0.2, ease:"power1.out"}, "-=0.1")
         .fromTo("#B-path", {drawSVG: 0}, {drawSVG: "100%", duration: 0.5, ease:"power1.out"}, "-=0.1")
         .fromTo(".logo", {paddingTop: '30vh'}, {paddingTop: '5vh', duration: 1, ease:"back.out(1.5)"})
-        .fromTo(".preloader-cover", {opacity: 1}, {opacity: 0, duration: 1, ease:"power1.out"})
-        .fromTo(".background", {scale: 4}, {scale: 1.2, duration: 1.5, ease: "power1.out"}, "-=1.5")
+        .fromTo("footer", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "back.out(1.5)"})
+        .fromTo(".preloader-cover", {opacity: 1}, {opacity: 0, duration: 1, ease:"power4.out"})
+        .fromTo(".background", {scale: 4}, {scale: 1.2, duration: 1, ease: "back.out(1.5)"}, "-=1.5")
 
         .fromTo(".list-1", {y: '100%'}, {y: '0%', duration: 1, ease:"back.out(1.5)"}, "-=1")
         .fromTo(CSSRulePlugin.getRule(".list-1:before"), {cssRule: {width: '0%'}}, {cssRule: {width: '130%', duration: 1, ease:"back.out(1.5)"}})
