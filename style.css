@@ -50,6 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    /* pointer-events: none; */
 }
 
 footer {
@@ -182,6 +183,8 @@ nav {
     row-gap: 5em;
     transform: translate(0, 0);
     transition: all 0.2s linear;
+    pointer-events: none;
+
 }
 
 .loading-section {
@@ -195,6 +198,8 @@ nav {
     left: 0;
     padding-left: 2vw;
     padding-top: 2em;
+    pointer-events: none;
+
 
     & h1 {
         translate: -150%;
@@ -477,6 +482,7 @@ g path {
     width: max-content;
     height: max-content;
     overflow: hidden;
+    z-index: 2;
     /* pointer-events: none; */
 }
 
